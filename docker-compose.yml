@@ -1,0 +1,8 @@
+version: '3'
+services:
+    monitor:
+      build: .
+      environment:
+        - HTTP_PROXY=socks4://192.168.1.24:10808
+        - HTTPS_PROXY=socks4://192.168.1.24:10808
+      restart: unless-stopped
